@@ -3,17 +3,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class jungol9018 {
+public class jungol9024 {
     public static void main(String[] args) throws IOException {
-        System.out.printf("두 개의 수를 입력하시오.");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        System.out.println(a + " + " + b + " = " + (a + b));
-        System.out.println(a + " - " + b + " = " + (a - b));
-        System.out.println(a + " * " + b + " = " + (a * b));
-        System.out.println(a + " / " + b + " = " + (a / b));
-        System.out.println(a + " % " + b + " = " + (a % b));
+        int c = Integer.parseInt(st.nextToken());
+        int answer = 0;
+        answer = a>b ? 1 : 0;
+        System.out.print(answer + " ");
+        answer = b>=c ? 1 : 0;
+        System.out.print(answer + " ");
+        answer = a<=b ? 1 : 0;
+        System.out.print(answer + " ");
+        answer = b<c ? 1 : 0;
+        System.out.print(answer + " ");
     }
 }
